@@ -18,3 +18,8 @@ sources:
       - name: constructor_standing
       - name: driver_price_change
       - name: constructor_price_change
+
+  - name: raw
+    schema: raw
+    tables:
+      - name: fastf1_session_results

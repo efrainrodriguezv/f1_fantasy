@@ -1,8 +1,10 @@
 """
-Extract one race weekend's data from FastF1 and load to Supabase raw schema.
+Extract FastF1 session data for one or many race weekends.
 
 Usage:
-    python extract/load_fastf1_race.py 2024 1    # 2024 season, round 1 (Bahrain)
+    python extract/load_fastf1_race.py 2024 1            # one race weekend
+    python extract/load_fastf1_race.py 2024              # full season
+    python extract/load_fastf1_race.py 2024,2025         # multiple seasons
 """
 import os
 import sys
@@ -14,8 +16,13 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
 
+# Session types we attempt for every weekend.
+# FastF1 raises an exception for sessions that don't exist (e.g. sprint at a
+# non-sprint weekend). We catch that per-session.
+SESSION_TYPES = ["FP1", "FP2", "FP3", "Q", "SS", "S", "R"]
+
+
 def get_engine():
-    """Build SQLAlchemy engine for Supabase from env vars."""
     load_dotenv()
     user = os.environ["SUPABASE_USER"]
     password = os.environ["SUPABASE_PASSWORD"]
@@ -27,32 +34,38 @@ def get_engine():
 
 
 def enable_cache():
-    """Point FastF1 at a local cache directory to speed up repeated calls."""
     cache_dir = Path(__file__).parent.parent / ".fastf1_cache"
     cache_dir.mkdir(exist_ok=True)
     fastf1.Cache.enable_cache(str(cache_dir))
 
 
-def load_session_results(year: int, round_number: int, session_type: str, engine):
-    """
-    Pull session results for one session and write to raw.fastf1_session_results.
-
-    session_type: 'Q' for qualifying, 'R' for race, 'S' for sprint, etc.
-    """
-    print(f"Loading {year} R{round_number} {session_type}...")
-    session = fastf1.get_session(year, round_number, session_type)
-    session.load(laps=False, telemetry=False, weather=False)  # results only — fast
+def load_session(year, round_number, session_type, engine, max_retries=5):
+    """Pull one session's results with exponential backoff on rate limits."""
+    for attempt in range(max_retries):
+        try:
+            session = fastf1.get_session(year, round_number, session_type)
+            session.load(laps=False, telemetry=False, weather=False)
+            break
+        except RateLimitExceededError:
+            wait = 2 ** attempt * 60  # 60s, 120s, 240s, 480s, 960s
+            print(f"  {session_type}: rate limited, sleeping {wait}s (attempt {attempt+1}/{max_retries})")
+            time.sleep(wait)
+    else:
+        print(f"  {session_type}: gave up after {max_retries} retries")
+        return
 
     results = session.results.copy()
-    # Add metadata so we can tell which race this row came from
+    if results.empty:
+        print(f"  {session_type}: empty")
+        return
+
     results["season_year"] = year
     results["round_number"] = round_number
     results["session_type_code"] = session_type
     results["event_name"] = session.event["EventName"]
-    results["session_start"] = session.date  # already a datetime
+    results["session_start"] = session.date
 
-    # Convert all columns to strings of safe types for bulk insert
-    # (FastF1 returns some columns with types pandas-to-sql doesn't handle well)
+    # Stringify object-typed columns to avoid pandas-to-sql type issues
     for col in results.columns:
         if results[col].dtype == "object":
             results[col] = results[col].astype(str)
@@ -64,26 +77,48 @@ def load_session_results(year: int, round_number: int, session_type: str, engine
         if_exists="append",
         index=False,
     )
-    print(f"  -> wrote {len(results)} rows")
+    print(f"  {session_type}: {len(results)} rows")
+
+
+def load_weekend(year, round_number, engine):
+    print(f"=== {year} Round {round_number} ===")
+    for session_type in SESSION_TYPES:
+        try:
+            load_session(year, round_number, session_type, engine)
+        except Exception as e:
+            # Most common reason: session doesn't exist for this weekend
+            # (sprint at non-sprint weekend, FP3 at sprint weekend, etc.)
+            print(f"  {session_type}: skipped ({type(e).__name__})")
+
+
+def get_season_rounds(year):
+    """Return list of round numbers for a given season."""
+    schedule = fastf1.get_event_schedule(year, include_testing=False)
+    return schedule["RoundNumber"].tolist()
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("Usage: python load_fastf1_race.py <year> <round>")
+    if len(sys.argv) < 2:
+        print("Usage: python load_fastf1_race.py <year>[,<year>] [<round>]")
         sys.exit(1)
 
-    year = int(sys.argv[1])
-    round_number = int(sys.argv[2])
+    # Parse arg 1: one or more years, comma-separated
+    years = [int(y) for y in sys.argv[1].split(",")]
+
+    # Parse arg 2 (optional): single round number
+    target_round = int(sys.argv[2]) if len(sys.argv) >= 3 else None
 
     enable_cache()
     engine = get_engine()
 
-    # Pull qualifying and race for this weekend
-    for session_type in ["Q", "R"]:
-        try:
-            load_session_results(year, round_number, session_type, engine)
-        except Exception as e:
-            print(f"  -> skipped {session_type}: {e}")
+    for year in years:
+        if target_round is not None:
+            load_weekend(year, target_round, engine)
+        else:
+            rounds = get_season_rounds(year)
+            print(f"Season {year}: {len(rounds)} rounds")
+            for r in rounds:
+                load_weekend(year, r, engine)
 
 
 if __name__ == "__main__":
