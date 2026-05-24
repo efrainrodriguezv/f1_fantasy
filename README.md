@@ -22,6 +22,13 @@ University of Chicago MS in Applied Data Science, Spring 2026.
 
 to be filled !! :D 
 
+## Known macOS issue
+On Apple Silicon with Python installed via uv, the dbt entry-point script
+may be killed by the OS. Workaround: add to ~/.zshrc:
+    alias dbt="python -m dbt.cli.main"
+This invokes dbt through Python's module loader and bypasses the script
+file, which avoids the issue.
+
 ## Team
 
 Efrain Rodriguez, Mateo Ronquillo, Robert Scott, Ananya Sen
