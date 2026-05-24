@@ -6,3 +6,15 @@ sources:
     tables:
       - name: country
       - name: driver
+      - name: constructor
+      - name: constructor_season
+      - name: driver_seat
+      - name: circuit
+      - name: race_weekend
+      - name: session_type
+      - name: session
+      - name: session_result
+      - name: driver_standing
+      - name: constructor_standing
+      - name: driver_price_change
+      - name: constructor_price_change
