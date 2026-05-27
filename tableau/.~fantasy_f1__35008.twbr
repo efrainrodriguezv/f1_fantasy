@@ -1,0 +1,1329 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='postgres (2)' inline='true' name='federated.0oedwsx0or8cjd10p2yco1mq6bdq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='aws-1-us-west-1.pooler.supabase.com' name='postgres.0bvoczx0c03mat1c6yug01l6jtml'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='aws-1-us-west-1.pooler.supabase.com' username='postgres.nmkrgqznrbokaapamidb' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.0bvoczx0c03mat1c6yug01l6jtml' name='v_constructor_performance' table='[olap].[v_constructor_performance]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>constructor_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[constructor_id]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>constructor_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>constructor_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[constructor_name]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>constructor_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>short_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[short_name]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>short_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season_year</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[season_year]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>season_year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>round_number</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[round_number]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>round_number</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekend_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weekend_name]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>weekend_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>constructor_race_points</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[constructor_race_points]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>constructor_race_points</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>best_finish</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[best_finish]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>best_finish</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drivers_dnf</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[drivers_dnf]</local-name>
+            <parent-name>[v_constructor_performance]</parent-name>
+            <remote-alias>drivers_dnf</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='v_constructor_performance' datatype='table' name='[__tableau_internal_object_id__].[v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96]' role='measure' type='quantitative' />
+      <column caption='Best Finish' datatype='integer' name='[best_finish]' role='measure' type='quantitative' />
+      <column caption='Constructor Id' datatype='integer' name='[constructor_id]' role='dimension' type='ordinal' />
+      <column caption='Constructor Name' datatype='string' name='[constructor_name]' role='dimension' type='nominal' />
+      <column caption='Constructor Race Points' datatype='real' name='[constructor_race_points]' role='measure' type='quantitative' />
+      <column caption='Drivers Dnf' datatype='integer' name='[drivers_dnf]' role='measure' type='quantitative' />
+      <column caption='Round Number' datatype='integer' name='[round_number]' role='dimension' type='ordinal' />
+      <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+      <column caption='Short Name' datatype='string' name='[short_name]' role='dimension' type='nominal' />
+      <column caption='Weekend Name' datatype='string' name='[weekend_name]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='v_constructor_performance' id='v_constructor_performance (olap.v_constructor_performance)_4B903D1E90E64AFBAD7BEE6AB1001A96'>
+            <properties context=''>
+              <relation connection='postgres.0bvoczx0c03mat1c6yug01l6jtml' name='v_constructor_performance' table='[olap].[v_constructor_performance]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='postgres (3)' inline='true' name='federated.17p6lys1map21319sf5y40h9250z' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='aws-1-us-west-1.pooler.supabase.com' name='postgres.00p7s4b0lp04dy1bpc2cm10q7cyd'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='aws-1-us-west-1.pooler.supabase.com' username='postgres.nmkrgqznrbokaapamidb' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.00p7s4b0lp04dy1bpc2cm10q7cyd' name='v_driver_recent_form' table='[olap].[v_driver_recent_form]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>driver_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[driver_id]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>driver_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>driver_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[driver_name]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>driver_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season_year</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[season_year]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>season_year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>round_number</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[round_number]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>round_number</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekend_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weekend_name]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>weekend_name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[start_date]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>start_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>points_scored</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[points_scored]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>points_scored</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>finish_position</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[finish_position]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>finish_position</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cumulative_season_points</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[cumulative_season_points]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>cumulative_season_points</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rolling_5_race_avg</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[rolling_5_race_avg]</local-name>
+            <parent-name>[v_driver_recent_form]</parent-name>
+            <remote-alias>rolling_5_race_avg</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='v_driver_recent_form' datatype='table' name='[__tableau_internal_object_id__].[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]' role='measure' type='quantitative' />
+      <column caption='Cumulative Season Points' datatype='real' name='[cumulative_season_points]' role='measure' type='quantitative' />
+      <column caption='Driver Id' datatype='integer' name='[driver_id]' role='dimension' type='ordinal' />
+      <column caption='Driver Name' datatype='string' name='[driver_name]' role='dimension' type='nominal' />
+      <column caption='Finish Position' datatype='integer' name='[finish_position]' role='measure' type='quantitative' />
+      <column caption='Points Scored' datatype='real' name='[points_scored]' role='measure' type='quantitative' />
+      <column caption='Rolling 5 Race Avg' datatype='real' name='[rolling_5_race_avg]' role='measure' type='quantitative' />
+      <column caption='Round Number' datatype='integer' name='[round_number]' role='dimension' type='ordinal' />
+      <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+      <column caption='Start Date' datatype='date' name='[start_date]' role='dimension' type='ordinal' />
+      <column caption='Weekend Name' datatype='string' name='[weekend_name]' role='dimension' type='nominal' />
+      <column-instance column='[driver_name]' derivation='None' name='[none:driver_name:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/fantasy_f1.twb Files/postgres (3).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/25/2026 05:22:24 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='postgres (3)' increment-value='%null%' refresh-type='create' rows-inserted='958' timestamp-start='2026-05-25 17:22:23.916' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>driver_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[driver_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>driver_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>driver_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[driver_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>driver_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>season_year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[season_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season_year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>round_number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[round_number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>round_number</remote-alias>
+              <ordinal>3</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weekend_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[weekend_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weekend_name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[start_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>points_scored</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[points_scored]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>points_scored</remote-alias>
+              <ordinal>6</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>finish_position</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[finish_position]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>finish_position</remote-alias>
+              <ordinal>7</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cumulative_season_points</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cumulative_season_points]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cumulative_season_points</remote-alias>
+              <ordinal>8</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>229</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rolling_5_race_avg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rolling_5_race_avg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rolling_5_race_avg</remote-alias>
+              <ordinal>9</ordinal>
+              <family>v_driver_recent_form</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>136</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:driver_name:nk]' type='palette'>
+            <map to='#305abf'>
+              <bucket>&quot;Max Verstappen&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Alexander Albon&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nico Hülkenberg&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Esteban Ocon&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Sergio Pérez&quot;</bucket>
+            </map>
+            <map to='#74f1d3'>
+              <bucket>&quot;George Russell&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Kevin Magnussen&quot;</bucket>
+            </map>
+            <map to='#7ec3bb'>
+              <bucket>&quot;Kimi Antonelli&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Guanyu Zhou&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Fernando Alonso&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Valtteri Bottas&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Logan Sargeant&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Carlos Sainz&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Oliver Bearman&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Franco Colapinto&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Yuki Tsunoda&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Lance Stroll&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Liam Lawson&quot;</bucket>
+            </map>
+            <map to='#d52e37'>
+              <bucket>&quot;Charles Leclerc&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Isack Hadjar&quot;</bucket>
+            </map>
+            <map to='#ec7370'>
+              <bucket>&quot;Lewis Hamilton&quot;</bucket>
+            </map>
+            <map to='#ee8633'>
+              <bucket>&quot;Lando Norris&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gabriel Bortoleto&quot;</bucket>
+            </map>
+            <map to='#f4b572'>
+              <bucket>&quot;Oscar Piastri&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Jack Doohan&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Daniel Ricciardo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Pierre Gasly&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='v_driver_recent_form' id='v_driver_recent_form (olap.v_driver_recent_form)_068CBE0B11B441D7B278631363ABF59B'>
+            <properties context=''>
+              <relation connection='postgres.00p7s4b0lp04dy1bpc2cm10q7cyd' name='v_driver_recent_form' table='[olap].[v_driver_recent_form]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='postgres' inline='true' name='federated.0hre9ks1x9pwpz165allq1exeg1n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='aws-1-us-west-1.pooler.supabase.com' name='postgres.1hmwyqz0p8msv71cf19xk1az7h9y'>
+            <connection authentication='username-password' class='postgres' dbname='postgres' one-time-sql='' port='5432' server='aws-1-us-west-1.pooler.supabase.com' username='postgres.nmkrgqznrbokaapamidb' />
+          </named-connection>
+        </named-connections>
+        <relation connection='postgres.1hmwyqz0p8msv71cf19xk1az7h9y' name='v_driver_value' table='[olap].[v_driver_value]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>driver_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[driver_id]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>driver_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>driver_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[driver_name]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>driver_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season_year</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[season_year]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>season_year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>races_run</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[races_run]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>races_run</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_points</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[total_points]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>total_points</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_points_per_race</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_points_per_race]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>avg_points_per_race</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wins</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[wins]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>wins</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>podiums</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[podiums]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>podiums</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dnfs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dnfs]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>dnfs</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_position_change</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[avg_position_change]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>avg_position_change</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_price</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[current_price]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>current_price</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>points_per_million</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[points_per_million]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>points_per_million</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>value_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[value_tier]</local-name>
+            <parent-name>[v_driver_value]</parent-name>
+            <remote-alias>value_tier</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <object-id>[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='v_driver_value' datatype='table' name='[__tableau_internal_object_id__].[v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA]' role='measure' type='quantitative' />
+      <column caption='Avg Points Per Race' datatype='real' name='[avg_points_per_race]' role='measure' type='quantitative' />
+      <column caption='Avg Position Change' datatype='real' name='[avg_position_change]' role='measure' type='quantitative' />
+      <column caption='Current Price' datatype='real' name='[current_price]' role='measure' type='quantitative' />
+      <column caption='Dnfs' datatype='integer' name='[dnfs]' role='measure' type='quantitative' />
+      <column caption='Driver Id' datatype='integer' name='[driver_id]' role='dimension' type='ordinal' />
+      <column caption='Driver Name' datatype='string' name='[driver_name]' role='dimension' type='nominal' />
+      <column caption='Podiums' datatype='integer' name='[podiums]' role='measure' type='quantitative' />
+      <column caption='Points Per Million' datatype='real' name='[points_per_million]' role='measure' type='quantitative' />
+      <column caption='Races Run' datatype='integer' name='[races_run]' role='measure' type='quantitative' />
+      <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+      <column caption='Total Points' datatype='real' name='[total_points]' role='measure' type='quantitative' />
+      <column caption='Value Tier' datatype='string' name='[value_tier]' role='dimension' type='nominal' />
+      <column caption='Wins' datatype='integer' name='[wins]' role='measure' type='quantitative' />
+      <column-instance column='[value_tier]' derivation='None' name='[none:value_tier:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:value_tier:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Fair value&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Undervalued&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Overvalued&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;No price&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='v_driver_value' id='v_driver_value (olap.v_driver_value)_9F03F7E4C3E44FCEB010A31EACA48ECA'>
+            <properties context=''>
+              <relation connection='postgres.1hmwyqz0p8msv71cf19xk1az7h9y' name='v_driver_value' table='[olap].[v_driver_value]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Constructor Consistency'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postgres (2)' name='federated.0oedwsx0or8cjd10p2yco1mq6bdq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0oedwsx0or8cjd10p2yco1mq6bdq'>
+            <column caption='Constructor Name' datatype='string' name='[constructor_name]' role='dimension' type='nominal' />
+            <column caption='Constructor Race Points' datatype='real' name='[constructor_race_points]' role='measure' type='quantitative' />
+            <column-instance column='[constructor_name]' derivation='None' name='[none:constructor_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[round_number]' derivation='None' name='[none:round_number:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[season_year]' derivation='None' name='[none:season_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Round Number' datatype='integer' name='[round_number]' role='dimension' type='ordinal' />
+            <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+            <column-instance column='[constructor_race_points]' derivation='Sum' name='[sum:constructor_race_points:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:round_number:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>21</bucket>
+              <bucket>3</bucket>
+              <bucket>6</bucket>
+              <bucket>9</bucket>
+              <bucket>8</bucket>
+              <bucket>11</bucket>
+              <bucket>19</bucket>
+              <bucket>13</bucket>
+              <bucket>22</bucket>
+              <bucket>4</bucket>
+              <bucket>14</bucket>
+              <bucket>12</bucket>
+              <bucket>7</bucket>
+              <bucket>20</bucket>
+              <bucket>24</bucket>
+              <bucket>10</bucket>
+              <bucket>18</bucket>
+              <bucket>5</bucket>
+              <bucket>2</bucket>
+              <bucket>16</bucket>
+              <bucket>1</bucket>
+              <bucket>15</bucket>
+              <bucket>23</bucket>
+              <bucket>17</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:season_year:qk]' included-values='in-range'>
+            <min>2025</min>
+            <max>2026</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:constructor_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[sum:constructor_race_points:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:season_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[sum:constructor_race_points:qk]' scope='rows' value='Points Per Race' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:constructor_name:nk]' />
+              <lod column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:round_number:ok]' />
+              <lod column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:season_year:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[sum:constructor_race_points:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[sum:constructor_race_points:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[sum:constructor_race_points:qk]</rows>
+        <cols>[federated.0oedwsx0or8cjd10p2yco1mq6bdq].[none:constructor_name:nk]</cols>
+      </table>
+      <simple-id uuid='{B9DEAB02-73E9-4854-B968-E39CD6F7EC4A}' />
+    </worksheet>
+    <worksheet name='Driver PPD'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postgres' name='federated.0hre9ks1x9pwpz165allq1exeg1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hre9ks1x9pwpz165allq1exeg1n'>
+            <column-instance column='[current_price]' derivation='Avg' name='[avg:current_price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_points]' derivation='Avg' name='[avg:total_points:qk]' pivot='key' type='quantitative' />
+            <column caption='Current Price' datatype='real' name='[current_price]' role='measure' type='quantitative' />
+            <column caption='Driver Name' datatype='string' name='[driver_name]' role='dimension' type='nominal' />
+            <column-instance column='[driver_name]' derivation='None' name='[none:driver_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season_year]' derivation='None' name='[none:season_year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[value_tier]' derivation='None' name='[none:value_tier:nk]' pivot='key' type='nominal' />
+            <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+            <column caption='Total Points' datatype='real' name='[total_points]' role='measure' type='quantitative' />
+            <column caption='Value Tier' datatype='string' name='[value_tier]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:current_price:qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:season_year:qk]' included-values='in-range'>
+            <min>2026</min>
+            <max>2026</max>
+          </filter>
+          <slices>
+            <column>[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:season_year:qk]</column>
+            <column>[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:current_price:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:current_price:qk]' scope='cols' value='Current Price ($M)' />
+            <format attr='width' field='[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:total_points:qk]' value='60' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:value_tier:nk]' />
+              <text column='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:driver_name:nk]' />
+              <lod column='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:driver_name:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear'>
+              <excluded-factors>
+                <column>[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:value_tier:nk]</column>
+              </excluded-factors>
+            </trendline>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:total_points:qk]</rows>
+        <cols>[federated.0hre9ks1x9pwpz165allq1exeg1n].[avg:current_price:qk]</cols>
+      </table>
+      <simple-id uuid='{B87E89D2-15FA-4227-B1C9-64C40E2E4579}' />
+    </worksheet>
+    <worksheet name='Recent Form'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='postgres (3)' name='federated.17p6lys1map21319sf5y40h9250z' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17p6lys1map21319sf5y40h9250z'>
+            <column-instance column='[rolling_5_race_avg]' derivation='Avg' name='[avg:rolling_5_race_avg:qk]' pivot='key' type='quantitative' />
+            <column caption='Driver Name' datatype='string' name='[driver_name]' role='dimension' type='nominal' />
+            <column-instance column='[driver_name]' derivation='None' name='[none:driver_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[round_number]' derivation='None' name='[none:round_number:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[season_year]' derivation='None' name='[none:season_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Rolling 5 Race Avg' datatype='real' name='[rolling_5_race_avg]' role='measure' type='quantitative' />
+            <column caption='Round Number' datatype='integer' name='[round_number]' role='dimension' type='ordinal' />
+            <column caption='Season Year' datatype='integer' name='[season_year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.17p6lys1map21319sf5y40h9250z].[none:driver_name:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:driver_name:nk]' member='&quot;Esteban Ocon&quot;' />
+              <groupfilter function='member' level='[none:driver_name:nk]' member='&quot;Kimi Antonelli&quot;' />
+              <groupfilter function='member' level='[none:driver_name:nk]' member='&quot;Liam Lawson&quot;' />
+              <groupfilter function='member' level='[none:driver_name:nk]' member='&quot;Oliver Bearman&quot;' />
+              <groupfilter function='member' level='[none:driver_name:nk]' member='&quot;Pierre Gasly&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.17p6lys1map21319sf5y40h9250z].[none:season_year:qk]' included-values='in-range'>
+            <min>2026</min>
+            <max>20246</max>
+          </filter>
+          <slices>
+            <column>[federated.17p6lys1map21319sf5y40h9250z].[none:driver_name:nk]</column>
+            <column>[federated.17p6lys1map21319sf5y40h9250z].[none:season_year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.17p6lys1map21319sf5y40h9250z].[avg:rolling_5_race_avg:qk]' scope='rows' value='5-Race Rolling Avg Points' />
+            <encoding attr='space' class='0' field='[federated.17p6lys1map21319sf5y40h9250z].[none:round_number:qk]' field-type='quantitative' max='26' min='1' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.17p6lys1map21319sf5y40h9250z].[none:driver_name:nk]' />
+              <text column='[federated.17p6lys1map21319sf5y40h9250z].[none:driver_name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.17p6lys1map21319sf5y40h9250z].[avg:rolling_5_race_avg:qk]</rows>
+        <cols>[federated.17p6lys1map21319sf5y40h9250z].[none:round_number:qk]</cols>
+      </table>
+      <simple-id uuid='{CC52E190-09E3-4FA7-B5FF-E9B5A1EFDA32}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Bold'>F1 Fantasy 2025: Driver Value, Constructor Form, Season Trajectory</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='11' param='horz' type-v2='layout-flow' w='99000' x='500' y='889'>
+            <zone h='98222' id='9' type-v2='layout-basic' w='89000' x='500' y='889'>
+              <zone h='98222' id='5' param='vert' type-v2='layout-flow' w='44500' x='45000' y='889'>
+                <zone h='8222' id='7' type-v2='title' w='44500' x='45000' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='90000' id='6' type-v2='layout-basic' w='44500' x='45000' y='9111'>
+                  <zone h='45000' id='13' name='Constructor Consistency' w='44500' x='45000' y='9111'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='45000' id='25' name='Recent Form' w='44500' x='45000' y='54111'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='98222' id='8' name='Driver PPD' w='44500' x='500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98222' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='10000' x='89500' y='889'>
+              <zone fixed-size='494' h='55778' id='12' is-fixed='true' name='Driver PPD' pane-specification-id='2' param='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:value_tier:nk]' type-v2='color' w='10000' x='89500' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Bold'>F1 Fantasy 2025: Driver Value, Constructor Form, Season Trajectory</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='30' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone h='8222' id='7' type-v2='title' w='44500' x='45000' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98222' id='8' is-fixed='true' name='Driver PPD' w='44500' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='494' h='55778' id='12' name='Driver PPD' pane-specification-id='2' param='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:value_tier:nk]' type-v2='color' w='10000' x='89500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45000' id='13' is-fixed='true' name='Constructor Consistency' w='44500' x='45000' y='9111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45000' id='25' is-fixed='true' name='Recent Form' w='44500' x='45000' y='54111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{29202FFA-D8BD-4A29-B452-E610F86AEFAD}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='72'>
+    <window class='worksheet' name='Driver PPD'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0hre9ks1x9pwpz165allq1exeg1n].[none:value_tier:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6105145B-2924-432E-B6C0-DB98C8F29331}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Constructor Consistency'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F4FA425A-30CC-4E1B-B19E-A4D8AC78400C}' />
+    </window>
+    <window class='worksheet' name='Recent Form'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.17p6lys1map21319sf5y40h9250z].[none:driver_name:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{86ECF3DC-FFDF-4F4D-80F3-83C68A6A3FD4}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Constructor Consistency'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Driver PPD'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Recent Form'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='4' />
+      <device-preview visible='true' />
+      <simple-id uuid='{48552BD5-5FC5-4E42-A58C-35D87C9FCD98}' />
+    </window>
+  </windows>
+</workbook>
